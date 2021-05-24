@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: space-between;">
+
+  <div style="color: white;">
+    <p>Scegli: </p>
+
+    <p class="item" (click)="onClickSasso()">Sasso</p>
+    <p class="item" (click)="onClickCarta()">Carta</p>
+    <p class="item" (click)="onClickForbice()">Forbice</p>
+  </div>
+
+  <div style="width: 80%; color: white;">
+    <p>Bot Risposta:</p>
+    <output>{{results}}</output>
+    <div *ngIf="timeout">3...2...1</div>
+  </div>
+</div>
+
+
+
+<div *ngIf="win" class="win">
+  <p>HAI VINTO</p>
+  <button class="riprova" (click)="onClickRiprova()">RIPROVA</button>
+</div>
+
+<div *ngIf="lose || draw" class="lose">
+  <p>Hai Perso</p>
+  <button class="riprova" (click)="onClickRiprova()">RIPROVA</button>
+</div>
