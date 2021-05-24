@@ -3,19 +3,20 @@
   <div style="color: white;">
     <p>Scegli: </p>
 
-    <p class="item" (click)="onClickSasso()">Sasso</p>
-    <p class="item" (click)="onClickCarta()">Carta</p>
-    <p class="item" (click)="onClickForbice()">Forbice</p>
+    <p class="item" (click)="onClickSasso()"><img src="./../../assets/images/icon-rock.svg"></p>
+    <p class="item" (click)="onClickCarta()"><img src="./../../assets/images/icon-paper.svg"></p>
+    <p class="item" (click)="onClickForbice()"><img src="./../../assets/images/icon-scissors.svg"></p>
   </div>
 
   <div style="width: 80%; color: white;">
     <p>Bot Risposta:</p>
-    <output>{{results}}</output>
+    <span *ngIf="sasso"><img src="./../../assets/images/icon-rock.svg"></span>
+    <span *ngIf="carta"><img src="./../../assets/images/icon-paper.svg"></span>
+    <span *ngIf="forbice"><img src="./../../assets/images/icon-scissors.svg"></span>
+
     <div *ngIf="timeout">3...2...1</div>
   </div>
 </div>
-
-
 
 <div *ngIf="win" class="win">
   <p>HAI VINTO</p>

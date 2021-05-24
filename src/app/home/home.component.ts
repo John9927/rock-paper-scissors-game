@@ -8,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  results: any;
   win = false;
   lose = false;
   draw = false;
   timeout = false;
+
+  sasso = false;
+  carta = false;
+  forbice = false;
 
   ngOnInit(): void { }
 
@@ -22,27 +25,36 @@ export class HomeComponent implements OnInit {
 
     if (random == 0) {
       setTimeout(() => {
-        this.results = "Forbice";
         this.win = true;
         this.lose = false;
         this.draw = false;
         this.timeout = false;
+
+        this.sasso = false;
+        this.carta = false;
+        this.forbice = true;
       }, 3000)
     } else if (random == 1) {
       setTimeout(() => {
-        this.results = "Carta"
         this.win = false;
         this.lose = true;
         this.draw = false;
         this.timeout = false;
+
+        this.sasso = false;
+        this.carta = true;
+        this.forbice = false;
       }, 3000)
     } else if (random == 2) {
       setTimeout(() => {
-        this.results = "Sasso";
         this.win = false;
         this.lose = false;
         this.draw = true;
         this.timeout = false;
+
+        this.sasso = true;
+        this.carta = false;
+        this.forbice = false;
       }, 3000)
     }
   }
@@ -53,27 +65,36 @@ export class HomeComponent implements OnInit {
 
     if (random == 0) {
       setTimeout(() =>  {
-        this.results = "Forbice";
         this.win = false;
         this.lose = true;
         this.draw = false;
         this.timeout = false;
+
+        this.sasso = false;
+        this.carta = false;
+        this.forbice = true;
       }, 3000)
     } else if (random == 1) {
       setTimeout(() => {
-        this.results = "Carta";
         this.win = false;
         this.lose = false;
         this.draw = true;
         this.timeout = false;
+
+        this.sasso = false;
+        this.carta = true;
+        this.forbice = false;
       }, 3000)
     } else if (random == 2) {
       setTimeout(() => {
-        this.results = "Sasso";
         this.win = true;
         this.lose = false;
         this.draw = false;
         this.timeout = false;
+
+        this.sasso = true;
+        this.carta = false;
+        this.forbice = false;
       }, 3000)
     }
   }
@@ -84,27 +105,36 @@ export class HomeComponent implements OnInit {
 
     if (random == 0) {
       setTimeout(() => {
-        this.results = "Forbice";
         this.win = false;
         this.lose = false;
         this.draw = true;
         this.timeout = false;
+
+        this.sasso = false;
+        this.carta = false;
+        this.forbice = true;
       }, 3000)
     } else if (random == 1) {
       setTimeout(() => {
-        this.results = "Carta";
         this.win = true;
         this.lose = false;
         this.draw = false;
         this.timeout = false;
+
+        this.sasso = false;
+        this.carta = true;
+        this.forbice = false;
       }, 3000)
     } else if (random == 2) {
       setTimeout(() => {
-        this.results = "Sasso";
         this.win = false;
         this.lose = true;
         this.draw = false;
         this.timeout = false;
+
+        this.sasso = true;
+        this.carta = false;
+        this.forbice = false;
       }, 3000)
     }
   }
