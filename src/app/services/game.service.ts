@@ -48,7 +48,7 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count+=10;
+        this.count += 10;
         // Se il numero random è 0 uscirà Forbice
         this.sasso = false;
         this.carta = false;
@@ -61,6 +61,11 @@ export class GameService {
         this.draw = false;
         this.timeout = false;
 
+        if (this.count == 0)
+          this.count;
+        else
+          this.count -= 5;
+
         // Se il numero random è 1 uscirà Carta
         this.sasso = false;
         this.carta = true;
@@ -72,6 +77,11 @@ export class GameService {
         this.lose = false;
         this.draw = true;
         this.timeout = false;
+
+        if (this.count == 0)
+          this.count;
+        else
+          this.count -= 5;
 
         // Se il numero random è 2 uscirà Sasso
         this.sasso = true;
@@ -93,11 +103,16 @@ export class GameService {
     this.responseForbice = false;
 
     if (random == 0) {
-      setTimeout(() =>  {
+      setTimeout(() => {
         this.win = false;
         this.lose = true;
         this.draw = false;
         this.timeout = false;
+
+        if (this.count == 0)
+          this.count;
+        else
+          this.count -= 5;
 
         this.sasso = false;
         this.carta = false;
@@ -110,6 +125,11 @@ export class GameService {
         this.draw = true;
         this.timeout = false;
 
+        if (this.count == 0)
+          this.count;
+        else
+          this.count -= 5;
+
         this.sasso = false;
         this.carta = true;
         this.forbice = false;
@@ -120,7 +140,7 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count+=10;
+        this.count += 10;
         this.sasso = true;
         this.carta = false;
         this.forbice = false;
@@ -146,6 +166,11 @@ export class GameService {
         this.draw = true;
         this.timeout = false;
 
+        if (this.count == 0)
+          this.count;
+        else
+          this.count -= 5;
+
         this.sasso = false;
         this.carta = false;
         this.forbice = true;
@@ -156,7 +181,7 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count+=10;
+        this.count += 10;
 
         this.sasso = false;
         this.carta = true;
@@ -168,6 +193,11 @@ export class GameService {
         this.lose = true;
         this.draw = false;
         this.timeout = false;
+
+        if (this.count == 0)
+          this.count;
+        else
+          this.count -= 5;
 
         this.sasso = true;
         this.carta = false;
