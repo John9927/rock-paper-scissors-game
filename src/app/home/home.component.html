@@ -1,39 +1,42 @@
-<div class="container__rules__modal" *ngIf="gameService.rules">
-  <app-rules></app-rules>
-</div>
 
-<div class="container" *ngIf="gameService.initial">
-  <!-- Score -->
-  <app-score></app-score>
+  <div class="container__rules__modal" *ngIf="gameService.rules">
+    <app-rules></app-rules>
+  </div>
 
-  <!-- Game -->
-  <div class="container__triangle">
-    <div class="triangle">
-      <img class="image" src="../../assets/images/bg-triangle.svg">
+  <div class="container" *ngIf="gameService.initial">
+    <!-- Score -->
+    <app-score></app-score>
+
+    <!-- Game -->
+    <div class="container__triangle">
+      <div class="triangle">
+        <img class="image" src="../../assets/images/bg-triangle.svg">
+      </div>
+    </div>
+    <div class="container__game">
+      <div class="card__game">
+        <div class="game">
+          <p class="item --blue" (click)="gameService.onClickPaper()"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
+          <p class="item --yellow" (click)="gameService.onClickScissors()"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
+        </div>
+
+        <div class="last__item">
+          <p class="item --red" (click)="gameService.onClickRock()"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
+        </div>
+      </div>
+
     </div>
   </div>
-  <div class="container__game">
-    <div class="game">
-      <p class="item --blue" (click)="gameService.onClickPaper()"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
-      <p class="item --yellow" (click)="gameService.onClickScissors()"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
-    </div>
 
-    <div class="last__item">
-      <p class="item --red" (click)="gameService.onClickRock()"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
-    </div>
-
+  <!-- Response Bot -->
+  <div *ngIf="gameService.bot">
+    <app-bot></app-bot>
   </div>
-</div>
 
-<!-- Response Bot -->
-<div *ngIf="gameService.bot">
-  <app-bot></app-bot>
-</div>
-
-<!-- Rules -->
-<div class="container__rules">
-  <span class="rules" (click)="onClickRules()">Rules</span>
-</div>
+  <!-- Rules -->
+  <div class="container__rules">
+    <span class="rules" (click)="onClickRules()">Rules</span>
+  </div>
 
 
 

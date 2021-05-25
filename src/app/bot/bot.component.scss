@@ -50,6 +50,12 @@
   color: red;
 }
 
+.label__win, .label__lose {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 // Response
 .container__response {
   display: flex;
@@ -171,12 +177,6 @@
     justify-content: center;
   }
 
-  .label__win, .label__lose {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
   .riprova {
     width: 50%;
   }
@@ -188,6 +188,7 @@
 
 @media screen and (max-width: 400px) {
   .response {
-    width: 90%;
+    width: 97%;
+    margin-left: -4px;
   }
 }
