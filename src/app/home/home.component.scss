@@ -163,16 +163,20 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .card__game {
-    margin-top: 359px;
+    margin-top: 175px;
   }
 
-  .container__game {
-    zoom: 80%
+  .game {
+    zoom: 80%;
   }
 
   .last__item {
-    margin-top: 183px;
+    zoom: 80%;
+  }
+
+  .last__item {
+    margin-top: 175px;
   }
 }
