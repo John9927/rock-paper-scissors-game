@@ -1,29 +1,62 @@
-<div style="display: flex; justify-content: space-between;">
+<div class="container">
+  <!-- Header -->
+  <div class="container__score">
+    <div class="score">
+      <div class="header__score">
+        <div class="description__score">
+          <span>ROCK</span>
+          <span>PAPER</span>
+          <span>SCISSORS</span>
+        </div>
 
-  <div style="color: white;">
-    <p>Scegli: </p>
-
-    <p class="item" (click)="onClickSasso()"><img src="./../../assets/images/icon-rock.svg"></p>
-    <p class="item" (click)="onClickCarta()"><img src="./../../assets/images/icon-paper.svg"></p>
-    <p class="item" (click)="onClickForbice()"><img src="./../../assets/images/icon-scissors.svg"></p>
+        <div class="points__score">
+          <span class="label__score">Score</span>
+          <span class="label__count">{{gameService.count}}</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div style="width: 80%; color: white;">
-    <p>Bot Risposta:</p>
-    <span *ngIf="sasso"><img src="./../../assets/images/icon-rock.svg"></span>
-    <span *ngIf="carta"><img src="./../../assets/images/icon-paper.svg"></span>
-    <span *ngIf="forbice"><img src="./../../assets/images/icon-scissors.svg"></span>
+  <!-- Game -->
+  <div style=" display: flex; justify-content: center; position: relative; width: 100%; margin-top: 150px; z-index: -1;">
+    <div style="display: flex; width: 100%; margin: auto; justify-content: center;">
+      <img class="image" src="../../assets/images/bg-triangle.svg">
+    </div>
+  </div>
+  <div class="container__game">
+    <div class="game">
+      <p class="item --blue" (click)="gameService.onClickPaper()"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
+      <p class="item --yellow" (click)="gameService.onClickScissors()"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
+    </div>
 
-    <div *ngIf="timeout">3...2...1</div>
+    <div class="last__item">
+      <p class="item --red" (click)="gameService.onClickRock()"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
+    </div>
+
+    <!-- <div class="bot">
+      <p>Bot Risposta:</p>
+      <span *ngIf="gameService.sasso"><img src="./../../assets/images/icon-rock.svg"></span>
+      <span *ngIf="gameService.carta"><img src="./../../assets/images/icon-paper.svg"></span>
+      <span *ngIf="gameService.forbice"><img src="./../../assets/images/icon-scissors.svg"></span>
+
+      <div *ngIf="gameService.timeout">3...2...1</div>
+    </div> -->
   </div>
 </div>
 
-<div *ngIf="win" class="win">
+<div *ngIf="gameService.win" class="win">
   <p>HAI VINTO</p>
   <button class="riprova" (click)="onClickRiprova()">RIPROVA</button>
 </div>
 
-<div *ngIf="lose || draw" class="lose">
+<div *ngIf="gameService.lose || gameService.draw" class="lose">
   <p>Hai Perso</p>
   <button class="riprova" (click)="onClickRiprova()">RIPROVA</button>
 </div>
+
+
+<!-- Rules -->
+<div class="container__rules">
+  <span class="rules">Rules</span>
+</div>
+
