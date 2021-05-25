@@ -54,3 +54,10 @@
   font-weight: bold;
   margin-top: -9px;
 }
+
+@media screen and (max-width: 800px) {
+  .container__score {
+    width: 90%;
+    margin: 30px auto;
+  }
+}

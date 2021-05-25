@@ -52,8 +52,33 @@
   height: 18px;
 }
 
+.closeMobile {
+  display: none;
+}
+
 @media screen and (max-width: 400px) {
+
   .rules {
-    width: 90%;
+    width: 100%;
+    height: 100vh;
+    border-radius: initial;
+    justify-content: center;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .closeMobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .label {
+    justify-content: center;
+    margin-bottom: 50px;
   }
 }
