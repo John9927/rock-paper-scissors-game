@@ -30,3 +30,120 @@
   margin: auto;
   cursor: pointer;
 }
+
+// Response
+.container__response {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.response {
+  display: flex;
+  width: 550px;
+  margin: 50px auto;
+  justify-content: space-between;
+}
+
+.label__response {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  width: 152px;
+}
+
+.container__game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+.item {
+  background: white;
+  cursor: pointer;
+  padding: 10px 10px 7px 10px;
+}
+
+
+.image__blue {
+  padding: 19px 32px 28px 29px;
+  border-top: 6px solid #bebebe;
+  border-radius: 50%;
+  z-index: -1;
+
+}
+
+.image__yellow {
+  padding: 19px 29px 26px 30px;
+  border-top: 6px solid #bebebe;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.image__red {
+  padding: 24px 31px 27px 30px;
+  border-top: 6px solid #bebebe;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.--blue {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  background-clip: content-box, border-box;
+  border-bottom: 5px solid hsl(230, 54%, 50%);
+
+  &:hover {
+  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  }
+}
+
+.--yellow {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  background-clip: content-box, border-box;
+  border-bottom: 5px solid hsl(39, 83%, 41%);
+
+  &:hover {
+  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  }
+}
+
+.--red {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  background-clip: content-box, border-box;
+  border-bottom: 5px solid hsl(349, 68%, 40%);
+
+  &:hover {
+  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .response {
+    width: 90%;
+  }
+  .game {
+    margin-left: initial;
+  }
+}

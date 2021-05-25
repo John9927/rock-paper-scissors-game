@@ -1,19 +1,37 @@
+<!-- Score -->
 <app-score></app-score>
+<!-- Game -->
+<div class="container__response">
+  <div class="response">
+    <!-- You Picked -->
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: flex;">
+        <span class="label__response">You Picked</span>
+      </div>
+      <div class="container__game">
+        <div class="game">
+          <p class="item --blue" *ngIf="gameService.responseCarta"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
+          <p class="item --yellow" *ngIf="gameService.responseForbice"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
+          <p class="item --red" *ngIf="gameService.responseSasso"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
+        </div>
+      </div>
+    </div>
+    <!-- The House Picked -->
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: flex;">
+        <span class="label__response">The House Picked</span>
+      </div>
+      <div class="container__game">
+        <div class="game bot ">
+          <p class="item --blue" *ngIf="gameService.carta && !gameService.timeout"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
+          <p class="item --yellow" *ngIf="gameService.forbice && !gameService.timeout"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
+          <p class="item --red" *ngIf="gameService.sasso && !gameService.timeout"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
+        </div>
+      </div>
+  </div>
 
-<div>
-  <span>Cosa ho cliccato io</span>
-  <span *ngIf="gameService.responseSasso"><img src="./../../assets/images/icon-rock.svg"></span>
-  <span *ngIf="gameService.responseCarta"><img src="./../../assets/images/icon-paper.svg"></span>
-  <span *ngIf="gameService.responseForbice"><img src="./../../assets/images/icon-scissors.svg"></span>
 </div>
 
-<div class="bot">
-  <span *ngIf="gameService.sasso && !gameService.timeout"><img src="./../../assets/images/icon-rock.svg"></span>
-  <span *ngIf="gameService.carta && !gameService.timeout"><img src="./../../assets/images/icon-paper.svg"></span>
-  <span *ngIf="gameService.forbice && !gameService.timeout"><img src="./../../assets/images/icon-scissors.svg"></span>
-
-  <div *ngIf="gameService.timeout">3...2...1</div>
-</div>
 
 <div *ngIf="gameService.win && gameService.timeout == false" class="win">
   <p>HAI VINTO</p>
