@@ -16,6 +16,17 @@
         </div>
       </div>
     </div>
+    <!-- Win -->
+    <div *ngIf="gameService.win && gameService.timeout == false" class="win">
+      <p class="label__win">YOU WIN</p>
+      <button class="riprova" (click)="gameService.onClickRiprova()"><span class="label__riprova">PLAY AGAIN</span></button>
+    </div>
+    <!-- Lose -->
+    <div *ngIf="gameService.lose || gameService.draw && gameService.timeout == false" class="lose">
+      <p class="label__lose">YOU LOSE</p>
+      <button class="riprova" (click)="gameService.onClickRiprova()"><span class="label__riprova">PLAY AGAIN</span></button>
+    </div>
+
     <!-- The House Picked -->
     <div style="display: flex; flex-direction: column;">
       <div style="display: flex;">
@@ -30,15 +41,8 @@
       </div>
   </div>
 
+
 </div>
 
 
-<div *ngIf="gameService.win && gameService.timeout == false" class="win">
-  <p>HAI VINTO</p>
-  <button class="riprova" (click)="gameService.onClickRiprova()">RIPROVA</button>
-</div>
 
-<div *ngIf="gameService.lose || gameService.draw && gameService.timeout == false" class="lose">
-  <p>Hai Perso</p>
-  <button class="riprova" (click)="gameService.onClickRiprova()">RIPROVA</button>
-</div>

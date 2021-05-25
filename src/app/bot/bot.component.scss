@@ -9,26 +9,45 @@
 .lose {
   display: flex;
   justify-content: space-between;
-  width: 31%;
+  width: 163px;
+  height: 116px;
   font-size: 40px;
-  color: red;
+  color: white;
+  flex-direction: column;
+  margin-top: 57px;
 }
 
 .win {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 31%;
+  width: 163px;
+  height: 116px;
   font-size: 40px;
-  color: rgb(157, 255, 0);
+  color: white;
+  margin-top: 57px;
 }
 
 .riprova {
   display: flex;
   height: 30px;
+  width: 100%;
+  align-items: center;
   border-radius: 8px;
   margin-left: 20px;
   margin: auto;
   cursor: pointer;
+  justify-content: center;
+  border: 0;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.label__riprova:hover {
+  color: red;
 }
 
 // Response
@@ -140,10 +159,35 @@
 
 
 @media screen and (max-width: 800px) {
-  .response {
-    width: 90%;
-  }
   .game {
     margin-left: initial;
+  }
+
+  .lose, .win {
+    position: absolute;
+    margin-top: 200px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .label__win, .label__lose {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .riprova {
+    width: 50%;
+  }
+
+  .response {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .response {
+    width: 90%;
   }
 }

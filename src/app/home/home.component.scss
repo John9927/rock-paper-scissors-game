@@ -162,3 +162,12 @@
     width: 90%;
   }
 }
+
+@media screen and (max-height: 500px) {
+  .container__game {
+    height: 695px;
+  }
+  .container__triangle {
+    margin-top: 74px;
+  }
+}
