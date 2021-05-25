@@ -165,15 +165,14 @@
 
 @media screen and (max-width: 400px) {
   .card__game {
-    margin-top: 171px;
+    margin-top: 359px;
+  }
+
+  .container__game {
+    zoom: 80%
+  }
+
+  .last__item {
+    margin-top: 183px;
   }
 }
-
-// @media screen and (max-height: 540px) {
-//   .container__game {
-//     // height: 695px;
-//   }
-//   .container__triangle {
-//     // margin-top: 74px;
-//   }
-// }
