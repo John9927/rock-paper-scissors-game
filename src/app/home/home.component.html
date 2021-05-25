@@ -1,3 +1,7 @@
+<div class="container__rules__modal" *ngIf="gameService.rules">
+  <app-rules></app-rules>
+</div>
+
 <div class="container">
   <!-- Header -->
   <div class="container__score">
@@ -57,6 +61,8 @@
 
 <!-- Rules -->
 <div class="container__rules">
-  <span class="rules">Rules</span>
+  <span class="rules" (click)="onClickRules()">Rules</span>
 </div>
+
+
 

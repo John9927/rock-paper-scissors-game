@@ -1,3 +1,4 @@
+import { GameService } from './../services/game.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RulesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
+  }
+
+  onClickClose() {
+    this.gameService.rules = false;
   }
 
 }

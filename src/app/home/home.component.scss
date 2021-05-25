@@ -110,6 +110,7 @@
   border-top: 6px solid #bebebe;
   border-radius: 50%;
   z-index: -1;
+
 }
 
 .image__yellow {
@@ -133,6 +134,10 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(230, 54%, 50%);
+
+  &:hover {
+  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  }
 }
 
 .--yellow {
@@ -142,6 +147,10 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(39, 83%, 41%);
+
+  &:hover {
+  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  }
 }
 
 .--red {
@@ -151,6 +160,10 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(349, 68%, 40%);
+
+  &:hover {
+  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  }
 }
 
 .lose {
@@ -189,7 +202,6 @@
   width: 114px;
   border-radius: 8px;
   transition: 200ms;
-
 
   &:hover {
     background: hsl(217, 15%, 34%);

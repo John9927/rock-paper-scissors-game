@@ -19,6 +19,8 @@ export class GameService {
 
   count = 0;
 
+  rules = false;
+
   getRandomNumber(max) {
     return Math.floor(Math.random() * max);
   }
