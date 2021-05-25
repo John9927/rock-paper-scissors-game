@@ -4,62 +4,6 @@
   flex-direction: column;
 }
 
-// header
-
-.container__score {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 30px;
-}
-
-.score {
-  display: flex;
-  border-radius: 12px;
-  width: 650px;
-  margin: 0 auto;
-  height: 100px;
-  border: 3px solid hsl(217, 16%, 45%);
-}
-
-.header__score {
-  display: flex;
-  justify-content: space-between;
-  width: 93%;
-  color: white;
-  margin: auto;
-}
-
-.description__score {
-  flex-direction: column;
-  display: flex;
-  font-size: 28px;
-}
-
-.points__score {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background: white;
-  color: hsl(229, 25%, 31%);
-  font-weight: bold;
-  width: 106px;
-  border-radius: 12px;
-}
-
-.label__score {
-  font-size: 13px;
-  text-transform: uppercase;
-}
-
-.label__count {
-  font-size: 35px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: -9px;
-}
-
 // game
 
 .container__game {
@@ -92,12 +36,7 @@
   margin-top: 120px;
 }
 
-.bot {
-  width: 76%;
-  color: white;
-  display: flex;
-  justify-content: center;
-}
+
 
 .item {
   background: white;
@@ -166,30 +105,6 @@
   }
 }
 
-.lose {
-  display: flex;
-  justify-content: space-between;
-  width: 31%;
-  font-size: 40px;
-  color: red;
-}
-
-.win {
-  display: flex;
-  justify-content: space-between;
-  width: 31%;
-  font-size: 40px;
-  color: rgb(157, 255, 0);
-}
-
-.riprova {
-  display: flex;
-  height: 30px;
-  border-radius: 8px;
-  margin-left: 20px;
-  margin: auto;
-  cursor: pointer;
-}
 
 // Rules
 .container__rules {

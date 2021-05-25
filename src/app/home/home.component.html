@@ -2,24 +2,9 @@
   <app-rules></app-rules>
 </div>
 
-<div class="container">
-  <!-- Header -->
-  <div class="container__score">
-    <div class="score">
-      <div class="header__score">
-        <div class="description__score">
-          <span>ROCK</span>
-          <span>PAPER</span>
-          <span>SCISSORS</span>
-        </div>
-
-        <div class="points__score">
-          <span class="label__score">Score</span>
-          <span class="label__count">{{gameService.count}}</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container" *ngIf="gameService.initial">
+  <!-- Score -->
+  <app-score></app-score>
 
   <!-- Game -->
   <div style=" display: flex; justify-content: center; position: relative; width: 100%; margin-top: 150px; z-index: -1;">
@@ -37,27 +22,13 @@
       <p class="item --red" (click)="gameService.onClickRock()"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
     </div>
 
-    <!-- <div class="bot">
-      <p>Bot Risposta:</p>
-      <span *ngIf="gameService.sasso"><img src="./../../assets/images/icon-rock.svg"></span>
-      <span *ngIf="gameService.carta"><img src="./../../assets/images/icon-paper.svg"></span>
-      <span *ngIf="gameService.forbice"><img src="./../../assets/images/icon-scissors.svg"></span>
-
-      <div *ngIf="gameService.timeout">3...2...1</div>
-    </div> -->
   </div>
 </div>
 
-<div *ngIf="gameService.win" class="win">
-  <p>HAI VINTO</p>
-  <button class="riprova" (click)="onClickRiprova()">RIPROVA</button>
+<!-- Response Bot -->
+<div *ngIf="gameService.bot">
+  <app-bot></app-bot>
 </div>
-
-<div *ngIf="gameService.lose || gameService.draw" class="lose">
-  <p>Hai Perso</p>
-  <button class="riprova" (click)="onClickRiprova()">RIPROVA</button>
-</div>
-
 
 <!-- Rules -->
 <div class="container__rules">

@@ -7,6 +7,13 @@ export class GameService {
 
   constructor() { }
 
+  initial = true;
+  bot = false;
+
+  responseSasso = false;
+  responseCarta = false;
+  responseForbice = false;
+
   sasso = false;
   carta = false;
   forbice = false;
@@ -28,6 +35,12 @@ export class GameService {
   onClickRock() {
     let random = this.getRandomNumber(3);
     this.timeout = true;
+    this.initial = false;
+    this.bot = true;
+
+    this.responseSasso = true;
+    this.responseCarta = false;
+    this.responseForbice = false;
 
     if (random == 0) {
       setTimeout(() => {
@@ -71,7 +84,13 @@ export class GameService {
 
   onClickPaper() {
     let random = this.getRandomNumber(3);
+    this.initial = false;
+    this.bot = true;
     this.timeout = true;
+
+    this.responseSasso = false;
+    this.responseCarta = true;
+    this.responseForbice = false;
 
     if (random == 0) {
       setTimeout(() =>  {
@@ -113,6 +132,12 @@ export class GameService {
   onClickScissors() {
     let random = this.getRandomNumber(3);
     this.timeout = true;
+    this.initial = false;
+    this.bot = true;
+
+    this.responseSasso = false;
+    this.responseCarta = false;
+    this.responseForbice = true;
 
     if (random == 0) {
       setTimeout(() => {
@@ -152,6 +177,7 @@ export class GameService {
   }
 
   onClickRiprova() {
-    window.location.reload()
+    this.initial = true;
+    this.bot = false;
   }
 }

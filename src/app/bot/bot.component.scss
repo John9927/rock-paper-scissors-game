@@ -1,0 +1,32 @@
+.bot {
+  width: 76%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+
+.lose {
+  display: flex;
+  justify-content: space-between;
+  width: 31%;
+  font-size: 40px;
+  color: red;
+}
+
+.win {
+  display: flex;
+  justify-content: space-between;
+  width: 31%;
+  font-size: 40px;
+  color: rgb(157, 255, 0);
+}
+
+.riprova {
+  display: flex;
+  height: 30px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin: auto;
+  cursor: pointer;
+}

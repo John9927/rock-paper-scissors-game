@@ -1,0 +1,26 @@
+<app-score></app-score>
+
+<div>
+  <span>Cosa ho cliccato io</span>
+  <span *ngIf="gameService.responseSasso"><img src="./../../assets/images/icon-rock.svg"></span>
+  <span *ngIf="gameService.responseCarta"><img src="./../../assets/images/icon-paper.svg"></span>
+  <span *ngIf="gameService.responseForbice"><img src="./../../assets/images/icon-scissors.svg"></span>
+</div>
+
+<div class="bot">
+  <span *ngIf="gameService.sasso && !gameService.timeout"><img src="./../../assets/images/icon-rock.svg"></span>
+  <span *ngIf="gameService.carta && !gameService.timeout"><img src="./../../assets/images/icon-paper.svg"></span>
+  <span *ngIf="gameService.forbice && !gameService.timeout"><img src="./../../assets/images/icon-scissors.svg"></span>
+
+  <div *ngIf="gameService.timeout">3...2...1</div>
+</div>
+
+<div *ngIf="gameService.win && !gameService.timeout" class="win">
+  <p>HAI VINTO</p>
+  <button class="riprova" (click)="gameService.onClickRiprova()">RIPROVA</button>
+</div>
+
+<div *ngIf="gameService.lose || gameService.draw && !gameService.timeout" class="lose">
+  <p>Hai Perso</p>
+  <button class="riprova" (click)="gameService.onClickRiprova()">RIPROVA</button>
+</div>
