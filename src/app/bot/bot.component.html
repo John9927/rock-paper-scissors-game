@@ -15,12 +15,12 @@
   <div *ngIf="gameService.timeout">3...2...1</div>
 </div>
 
-<div *ngIf="gameService.win && !gameService.timeout" class="win">
+<div *ngIf="gameService.win && gameService.timeout == false" class="win">
   <p>HAI VINTO</p>
   <button class="riprova" (click)="gameService.onClickRiprova()">RIPROVA</button>
 </div>
 
-<div *ngIf="gameService.lose || gameService.draw && !gameService.timeout" class="lose">
+<div *ngIf="gameService.lose || gameService.draw && gameService.timeout == false" class="lose">
   <p>Hai Perso</p>
   <button class="riprova" (click)="gameService.onClickRiprova()">RIPROVA</button>
 </div>

@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   constructor(public gameService: GameService) { }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.gameService.initial = true;
+    this.gameService.bot = false;
+  }
+
+
 
   onClickRules() {
     this.gameService.rules = true;
-    console.log(this.gameService.rules)
   }
 }
