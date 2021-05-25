@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 180px;
+  margin-top: 135px;
 }
 
 .game {
@@ -164,16 +164,16 @@
 }
 
 @media screen and (max-width: 400px) {
-  .game {
-    // width: 90%;
+  .card__game {
+    margin-top: 171px;
   }
 }
 
-@media screen and (max-height: 540px) {
-  .container__game {
-    // height: 695px;
-  }
-  .container__triangle {
-    // margin-top: 74px;
-  }
-}
+// @media screen and (max-height: 540px) {
+//   .container__game {
+//     // height: 695px;
+//   }
+//   .container__triangle {
+//     // margin-top: 74px;
+//   }
+// }
