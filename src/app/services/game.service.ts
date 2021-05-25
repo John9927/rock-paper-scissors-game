@@ -209,6 +209,7 @@ export class GameService {
   onClickRiprova() {
     this.initial = true;
     this.bot = false;
-    this.timeout = true;
+    this.lose = false;
+    this.win = false;
   }
 }
