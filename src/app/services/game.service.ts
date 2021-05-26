@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+
+const add = (a: any, b: any) => a + b;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +12,7 @@ export class GameService {
 
   count: any = 0;
   storedCount: any = localStorage.getItem('count');
-
+  winNumber = 2;
   initial = true;
   bot = false;
 
@@ -28,7 +31,6 @@ export class GameService {
   draw = false;
 
   timeout = false;
-
 
   rules = false;
 
@@ -52,8 +54,11 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count = this.count + 10;
-        this.resultCount = localStorage.setItem('count', `${this.count}`);
+        // Non funziona la Addition assignment
+        this.count++;
+        this.count++;
+        this.count++;
+        this.storedCount = localStorage.setItem('count', `${this.count}`);
         // Se il numero random è 0 uscirà Forbice
         this.sasso = false;
         this.carta = false;
@@ -66,11 +71,11 @@ export class GameService {
         this.draw = false;
         this.timeout = false;
 
-        if (this.count == 0)
+        if (this.count <= 0)
           this.count;
         else {
-          this.count = this.count - 5;
-          this.resultCount = localStorage.setItem('count', `${this.count}`);
+          --this.count;
+          this.storedCount = localStorage.setItem('count', `${this.count}`);
         }
         // Se il numero random è 1 uscirà Carta
         this.sasso = false;
@@ -84,11 +89,11 @@ export class GameService {
         this.draw = true;
         this.timeout = false;
 
-        if (this.count == 0)
+        if (this.count <= 0)
           this.count;
         else {
-          this.count = this.count - 5;
-          this.resultCount = localStorage.setItem('count', `${this.count}`);
+          --this.count;
+          this.storedCount = localStorage.setItem('count', `${this.count}`);
         }
 
         // Se il numero random è 2 uscirà Sasso
@@ -117,10 +122,10 @@ export class GameService {
         this.draw = false;
         this.timeout = false;
 
-        if (this.count == 0)
+        if (this.count <= 0)
           this.count;
         else {
-          this.count -= 5;
+          --this.count;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
 
@@ -135,10 +140,10 @@ export class GameService {
         this.draw = true;
         this.timeout = false;
 
-        if (this.count == 0)
+        if (this.count <= 0)
           this.count;
         else {
-          this.count -= 5;
+          --this.count;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
 
@@ -152,7 +157,10 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count += 10;
+        // Non funziona la Addition assignment
+        this.count++;
+        this.count++;
+        this.count++;
         this.resultCount = localStorage.setItem('count', `${this.count}`);
         this.sasso = true;
         this.carta = false;
@@ -179,12 +187,12 @@ export class GameService {
         this.draw = true;
         this.timeout = false;
 
-        if (this.count == 0) {
+        if (this.count <= 0) {
           this.count;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
         else {
-          this.count -= 5;
+          --this.count;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
 
@@ -200,7 +208,10 @@ export class GameService {
         this.timeout = false;
 
         if (this.win) {
-          this.count += 10;
+          // Non funziona la Addition assignment
+          this.count++;
+          this.count++;
+          this.count++;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
 
@@ -215,12 +226,12 @@ export class GameService {
         this.draw = false;
         this.timeout = false;
 
-        if (this.count == 0) {
+        if (this.count <= 0) {
           this.count;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
         else {
-          this.count -= 5;
+          --this.count;
           this.resultCount = localStorage.setItem('count', `${this.count}`);
         }
 
