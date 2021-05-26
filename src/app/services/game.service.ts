@@ -63,7 +63,7 @@ export class GameService {
         this.sasso = false;
         this.carta = false;
         this.forbice = true;
-      }, 1500)
+      }, 3000)
     } else if (random == 1) {
       setTimeout(() => {
         this.win = false;

@@ -40,7 +40,7 @@
           <span class="label__response">The House Picked</span>
         </div>
         <div class="container__game">
-          <div class="game bot ">
+          <div class="game bot " *ngIf="gameService.carta && !gameService.timeout || gameService.forbice && !gameService.timeout || gameService.sasso && !gameService.timeout; else pulse" >
             <p class="item --blue" *ngIf="gameService.carta && !gameService.timeout"><img class="image__blue"
                 src="./../../assets/images/icon-paper.svg"></p>
             <p class="item --yellow" *ngIf="gameService.forbice && !gameService.timeout"><img class="image__yellow"
@@ -52,3 +52,9 @@
       </div>
     </div>
   </div>
+
+  <ng-template #pulse>
+    <div class="item --gray">
+
+    </div>
+  </ng-template>

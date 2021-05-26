@@ -56,7 +56,8 @@
   color: red;
 }
 
-.label__win, .label__lose {
+.label__win,
+.label__lose {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -130,16 +131,28 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(230, 54%, 50%);
+}
+
+.--gray {
+  margin-top: 38px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: linear-gradient(hsl(217, 16%, 45%), hsl(217, 16%, 45%));
+  background-clip: content-box, border-box;
+  animation: pulse 750ms infinite;
 }
 
 .--yellow {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(39, 83%, 41%);
 }
@@ -148,18 +161,19 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(349, 68%, 40%);
 }
-
 
 @media screen and (max-width: 800px) {
   .game {
     margin-left: initial;
   }
 
-  .lose, .win {
+  .lose,
+  .win {
     position: absolute;
     margin-top: 200px;
     display: flex;
@@ -182,5 +196,21 @@
   .response {
     width: 97%;
     margin-left: -4px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
   }
 }
