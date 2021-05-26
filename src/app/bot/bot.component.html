@@ -1,48 +1,54 @@
-<!-- Score -->
-<app-score></app-score>
-<!-- Game -->
-<div class="container__response">
-  <div class="response">
-    <!-- You Picked -->
-    <div style="display: flex; flex-direction: column;">
-      <div style="display: flex;">
-        <span class="label__response">You Picked</span>
-      </div>
-      <div class="container__game">
-        <div class="game">
-          <p class="item --blue" *ngIf="gameService.responseCarta"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
-          <p class="item --yellow" *ngIf="gameService.responseForbice"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
-          <p class="item --red" *ngIf="gameService.responseSasso"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
-        </div>
-      </div>
-    </div>
-    <!-- Win -->
-    <div *ngIf="gameService.win && gameService.timeout == false" class="win">
-      <p class="label__win">YOU WIN</p>
-      <button class="riprova" (click)="gameService.onClickRiprova()"><span class="label__riprova">PLAY AGAIN</span></button>
-    </div>
-    <!-- Lose -->
-    <div *ngIf="gameService.lose || gameService.draw && gameService.timeout == false" class="lose">
-      <p class="label__lose">YOU LOSE</p>
-      <button class="riprova" (click)="gameService.onClickRiprova()"><span class="label__riprova">PLAY AGAIN</span></button>
-    </div>
+<div class="master">
 
-    <!-- The House Picked -->
-    <div style="display: flex; flex-direction: column;">
-      <div style="display: flex;">
-        <span class="label__response">The House Picked</span>
-      </div>
-      <div class="container__game">
-        <div class="game bot ">
-          <p class="item --blue" *ngIf="gameService.carta && !gameService.timeout"><img class="image__blue" src="./../../assets/images/icon-paper.svg"></p>
-          <p class="item --yellow" *ngIf="gameService.forbice && !gameService.timeout"><img class="image__yellow" src="./../../assets/images/icon-scissors.svg"></p>
-          <p class="item --red" *ngIf="gameService.sasso && !gameService.timeout"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
+  <!-- Score -->
+  <app-score></app-score>
+  <!-- Game -->
+  <div class="container__response">
+    <div class="response">
+      <!-- You Picked -->
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex;">
+          <span class="label__response">You Picked</span>
+        </div>
+        <div class="container__game">
+          <div class="game">
+            <p class="item --blue" *ngIf="gameService.responseCarta"><img class="image__blue"
+                src="./../../assets/images/icon-paper.svg"></p>
+            <p class="item --yellow" *ngIf="gameService.responseForbice"><img class="image__yellow"
+                src="./../../assets/images/icon-scissors.svg"></p>
+            <p class="item --red" *ngIf="gameService.responseSasso"><img class="image__red"
+                src="./../../assets/images/icon-rock.svg"></p>
+          </div>
         </div>
       </div>
+      <!-- Win -->
+      <div *ngIf="gameService.win && gameService.timeout == false" class="win">
+        <p class="label__win">YOU WIN</p>
+        <button class="riprova" (click)="gameService.onClickRiprova()"><span class="label__riprova">PLAY
+            AGAIN</span></button>
+      </div>
+      <!-- Lose -->
+      <div *ngIf="gameService.lose || gameService.draw && gameService.timeout == false" class="lose">
+        <p class="label__lose">YOU LOSE</p>
+        <button class="riprova" (click)="gameService.onClickRiprova()"><span class="label__riprova">PLAY
+            AGAIN</span></button>
+      </div>
+
+      <!-- The House Picked -->
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex;">
+          <span class="label__response">The House Picked</span>
+        </div>
+        <div class="container__game">
+          <div class="game bot ">
+            <p class="item --blue" *ngIf="gameService.carta && !gameService.timeout"><img class="image__blue"
+                src="./../../assets/images/icon-paper.svg"></p>
+            <p class="item --yellow" *ngIf="gameService.forbice && !gameService.timeout"><img class="image__yellow"
+                src="./../../assets/images/icon-scissors.svg"></p>
+            <p class="item --red" *ngIf="gameService.sasso && !gameService.timeout"><img class="image__red"
+                src="./../../assets/images/icon-rock.svg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-</div>
-
-
-

@@ -7,8 +7,13 @@ export class GameService {
 
   constructor() { }
 
+  count: any = 0;
+  storedCount: any = localStorage.getItem('count');
+
   initial = true;
   bot = false;
+
+  resultCount: any;
 
   responseSasso = false;
   responseCarta = false;
@@ -24,7 +29,6 @@ export class GameService {
 
   timeout = false;
 
-  count = 0;
 
   rules = false;
 
@@ -48,7 +52,8 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count += 10;
+        this.count = this.count + 10;
+        this.resultCount = localStorage.setItem('count', `${this.count}`);
         // Se il numero random è 0 uscirà Forbice
         this.sasso = false;
         this.carta = false;
@@ -63,9 +68,10 @@ export class GameService {
 
         if (this.count == 0)
           this.count;
-        else
-          this.count -= 5;
-
+        else {
+          this.count = this.count - 5;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
         // Se il numero random è 1 uscirà Carta
         this.sasso = false;
         this.carta = true;
@@ -80,8 +86,10 @@ export class GameService {
 
         if (this.count == 0)
           this.count;
-        else
-          this.count -= 5;
+        else {
+          this.count = this.count - 5;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
 
         // Se il numero random è 2 uscirà Sasso
         this.sasso = true;
@@ -111,8 +119,10 @@ export class GameService {
 
         if (this.count == 0)
           this.count;
-        else
+        else {
           this.count -= 5;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
 
         this.sasso = false;
         this.carta = false;
@@ -127,8 +137,10 @@ export class GameService {
 
         if (this.count == 0)
           this.count;
-        else
+        else {
           this.count -= 5;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
 
         this.sasso = false;
         this.carta = true;
@@ -141,6 +153,7 @@ export class GameService {
         this.draw = false;
         this.timeout = false;
         this.count += 10;
+        this.resultCount = localStorage.setItem('count', `${this.count}`);
         this.sasso = true;
         this.carta = false;
         this.forbice = false;
@@ -166,10 +179,14 @@ export class GameService {
         this.draw = true;
         this.timeout = false;
 
-        if (this.count == 0)
+        if (this.count == 0) {
           this.count;
-        else
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
+        else {
           this.count -= 5;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
 
         this.sasso = false;
         this.carta = false;
@@ -181,7 +198,11 @@ export class GameService {
         this.lose = false;
         this.draw = false;
         this.timeout = false;
-        this.count += 10;
+
+        if (this.win) {
+          this.count += 10;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
 
         this.sasso = false;
         this.carta = true;
@@ -194,10 +215,14 @@ export class GameService {
         this.draw = false;
         this.timeout = false;
 
-        if (this.count == 0)
+        if (this.count == 0) {
           this.count;
-        else
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
+        else {
           this.count -= 5;
+          this.resultCount = localStorage.setItem('count', `${this.count}`);
+        }
 
         this.sasso = true;
         this.carta = false;

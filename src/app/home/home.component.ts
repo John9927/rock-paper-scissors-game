@@ -11,9 +11,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.gameService.initial = true;
     this.gameService.bot = false;
+    // this.gameService.resultCount = this.gameService.storedCount;
   }
-
-
 
   onClickRules() {
     this.gameService.rules = true;

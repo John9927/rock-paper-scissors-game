@@ -1,3 +1,13 @@
+.master {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  // background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)) no-repeat;
+  // background-size: cover;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -42,8 +52,6 @@
   margin-top: 135px;
 }
 
-
-
 .item {
   background: white;
   cursor: pointer;
@@ -55,7 +63,6 @@
   border-top: 6px solid #bebebe;
   border-radius: 50%;
   z-index: -1;
-
 }
 
 .image__yellow {
@@ -76,12 +83,18 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(230, 54%, 50%);
 
   &:hover {
-  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    background-image: linear-gradient(#bebebe, #bebebe),
+      radial-gradient(
+        circle at top left,
+        hsl(230, 89%, 62%),
+        hsl(230, 89%, 65%)
+      );
   }
 }
 
@@ -89,12 +102,14 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(39, 83%, 41%);
 
   &:hover {
-  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    background-image: linear-gradient(#bebebe, #bebebe),
+      radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   }
 }
 
@@ -102,21 +117,41 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(349, 68%, 40%);
 
   &:hover {
-  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    background-image: linear-gradient(#bebebe, #bebebe),
+      radial-gradient(
+        circle at top left,
+        hsl(349, 71%, 52%),
+        hsl(349, 70%, 56%)
+      );
   }
 }
 
-
 // Rules
+
+.master__rules {
+  // display: flex;
+  // width: 100%;
+  // height: 100%;
+  // justify-content: flex-end;
+
+  display: flex;
+  width: 100%;
+  position: absolute;
+  justify-content: flex-end;
+  bottom: 0;
+}
+
 .container__rules {
   display: flex;
   height: 28px;
-  position: absolute;
+  // position: absolute;
+  position: relative;
   bottom: 25px;
   right: 29px;
   border: 2px solid hsl(217, 16%, 45%);
@@ -147,7 +182,6 @@
   position: relative;
   width: 100%;
   height: 82vh;
-  z-index: -1;
 }
 
 .triangle {
@@ -168,10 +202,6 @@
     margin-top: 175px;
   }
 
-  .container__triangle {
-    height: 80vh;
-  }
-
   .game {
     zoom: 80%;
   }
@@ -183,4 +213,39 @@
   .last__item {
     margin-top: 175px;
   }
+
+  .container__triangle {
+    height: 75vh;
+  }
+
+  .container__game {
+    height: 96vh;
+  }
+
+  .master__rules {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .container__rules {
+    display: flex;
+    height: 28px;
+    position: relative;
+    bottom: 6px;
+    margin: 0px 10px 10px 0px;
+    color: red;
+    border: 2px solid #606e85;
+    width: 112px;
+    border-radius: 8px;
+    transition: 200ms;
+  }
 }
+
+@media screen and (max-height: 550px) {
+  .master__rules {
+    display: none;
+  }
+}
+
+

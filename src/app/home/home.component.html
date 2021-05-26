@@ -1,4 +1,7 @@
 
+  <div class="master">
+
+
   <div class="container__rules__modal" *ngIf="gameService.rules">
     <app-rules></app-rules>
   </div>
@@ -24,7 +27,6 @@
           <p class="item --red" (click)="gameService.onClickRock()"><img class="image__red" src="./../../assets/images/icon-rock.svg"></p>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -34,8 +36,12 @@
   </div>
 
   <!-- Rules -->
-  <div class="container__rules">
-    <span class="rules" (click)="onClickRules()">Rules</span>
+  <div class="master__rules">
+    <div class="container__rules">
+      <span class="rules" (click)="onClickRules()">Rules</span>
+    </div>
+  </div>
+
   </div>
 
 
