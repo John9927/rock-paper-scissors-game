@@ -11,10 +11,15 @@ export class ScoreComponent implements OnInit {
   constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
-    if(!localStorage.getItem('count')) {
+    if (!localStorage.getItem('count')) {
       localStorage.setItem('count', '0');
     } else {
       this.gameService.count = localStorage.getItem('count');
     }
+  }
+
+  onResetCount() {
+    this.gameService.count = this.gameService.count = 0;
+    localStorage.setItem('count', this.gameService.count);
   }
 }

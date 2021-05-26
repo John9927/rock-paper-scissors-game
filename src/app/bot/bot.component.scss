@@ -12,7 +12,6 @@
   justify-content: center;
 }
 
-
 .lose {
   display: flex;
   justify-content: space-between;
@@ -103,17 +102,14 @@
 
 .item {
   background: white;
-  cursor: pointer;
   padding: 10px 10px 7px 10px;
 }
-
 
 .image__blue {
   padding: 19px 32px 28px 29px;
   border-top: 6px solid #bebebe;
   border-radius: 50%;
   z-index: -1;
-
 }
 
 .image__yellow {
@@ -137,10 +133,6 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(230, 54%, 50%);
-
-  &:hover {
-  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  }
 }
 
 .--yellow {
@@ -150,10 +142,6 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(39, 83%, 41%);
-
-  &:hover {
-  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  }
 }
 
 .--red {
@@ -163,12 +151,7 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   background-clip: content-box, border-box;
   border-bottom: 5px solid hsl(349, 68%, 40%);
-
-  &:hover {
-  background-image: linear-gradient(#bebebe, #bebebe), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  }
 }
-
 
 
 @media screen and (max-width: 800px) {

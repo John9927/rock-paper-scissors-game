@@ -41,6 +41,19 @@
   font-weight: bold;
   width: 106px;
   border-radius: 12px;
+  transition: 200ms;
+
+  .reset__count {
+    display: none;
+  }
+
+  &:hover {
+    .reset__count {
+      display: flex;
+    }
+    cursor: pointer;
+    background: red;
+  }
 }
 
 .label__score {

@@ -7,9 +7,10 @@
         <span>SCISSORS</span>
       </div>
 
-      <div class="points__score">
-        <span class="label__score">Score</span>
-        <span class="label__count">{{gameService.count}}</span>
+      <div class="points__score" (click)="onResetCount()">
+          <span class="label__score">Score</span>
+          <span class="label__count" >{{gameService.count}}</span>
+          <span class="reset__count">ResetPoints</span>
       </div>
     </div>
   </div>
