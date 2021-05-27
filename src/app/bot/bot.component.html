@@ -20,6 +20,8 @@
                 src="./../../assets/images/icon-rock.svg"></p>
           </div>
         </div>
+        <div *ngIf="gameService.win && gameService.timeout == false" class="animated-win">
+        </div>
       </div>
       <!-- Win -->
       <div *ngIf="gameService.win && gameService.timeout == false" class="win">
@@ -49,6 +51,9 @@
             <p class="item --red" *ngIf="gameService.sasso && !gameService.timeout"><img class="image__red"
                 src="./../../assets/images/icon-rock.svg"></p>
           </div>
+        </div>
+        <!-- Animated Lose -->
+        <div *ngIf="gameService.lose || gameService.draw && gameService.timeout == false" class="animated-lose" >
         </div>
       </div>
     </div>

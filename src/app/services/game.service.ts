@@ -12,7 +12,6 @@ export class GameService {
 
   count: any = 0;
   storedCount: any = localStorage.getItem('count');
-  winNumber = 2;
   initial = true;
   bot = false;
 
